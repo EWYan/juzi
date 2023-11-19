@@ -41,6 +41,7 @@ fn main() {
         .unwrap();
 
     println!("cargo:rustc-link-search=native={}", out_dir);
+    // println!("cargo:rustc-link-search=native={}", Path::new("./").display());
     println!("cargo:rustc-link-lib=static=cffi");
     println!("cargo:rerun-if-changed=src/cdd/");
 }

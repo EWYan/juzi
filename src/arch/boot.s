@@ -1,4 +1,4 @@
-.extern vApplicationIRQHandler
+.extern irq_handle
 .extern _stack_end
 .extern _sys_stack_top
 .extern _svc_stack_top
@@ -88,7 +88,7 @@ osIrqHandler:
     sub     sp, sp, r2
 
     push    {{r0-r4, lr}}
-    ldr     r1, =vApplicationIRQHandler
+    ldr     r1, =irq_handle
     blx     r1
     pop     {{r0-r4, lr}}
     add     sp, sp, r2

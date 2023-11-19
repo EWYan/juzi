@@ -1,0 +1,12 @@
+#ifndef COMMON_H_
+#define COMMON_H_
+
+#define CONFIG_ARM64 1
+#define CONFIG_ARMV8_A_NS 0
+#define CONFIG_GIC_V2 1
+#define CONFIG_GIC_VER 2
+#define CONFIG_MP_NUM_CPUS 1
+#define CONFIG_CBPRINTF_LIBC_SUBSTS 1
+#define CONFIG_PRINTK 1
+
+#endif /* COMMON_H_ */
